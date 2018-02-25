@@ -1,0 +1,12 @@
+<td>
+
+               // groupId can be flexible   
+                <? if ($groupId = Mage::getSingleton('customer/session')->getCustomerGroupId()== "18") {?>
+
+                Available Stock
+
+                <br /><?= (int) Mage::getModel('cataloginventory/stock_item')->loadByProduct($_item)->getQty()?>
+
+                <? } ?>
+
+</td>
